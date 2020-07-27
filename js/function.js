@@ -47,7 +47,7 @@ if (site=='')
 	}
 else if (site.split('.')[1] == 'ddn')
 	{
-		url = 'https://raw.githubusercontent.com/Sokol491/Deep-Decentral-Net/master/nodelist.json';
+		url = 'https://deep-decentral-net.github.io/nodelist.json';
 		var req = null;
 		try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {
 			try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {
