@@ -1,0 +1,17 @@
+[
+    {
+        "site": "deepdecentralnet.ddn",
+        "hash": "0x192a32cfa41465e8ce7fa1968697daaddc9932d5cd43b46b2a4af78456871886",
+        "blochain": "minter"
+    },
+    {
+        "site": "test.ddn",
+        "hash": "0x1644430f13069ca31683db02125b7800e55b07a88483e9f22793f8f15c709524",
+        "blochain": "minter"
+    },
+    {
+        "site": "private.ddn",
+        "hash": "0x9f1a68936a29ae864ad862933efacd91c85e5af70039a8074048db43eb60d806",
+        "blochain": "minter"
+    }
+ ]
