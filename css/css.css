@@ -1,9 +1,12 @@
 html, body, ul, li {
 	margin: 0;
 	padding: 0;
-	}
+}
 
 .enjoy-css {
+	float: left; /* Выравнивание по левому краю */
+	margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+	width: 80%; 
   display: inline-block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -26,6 +29,8 @@ html, body, ul, li {
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 button{
+	float: left; /* Выравнивание по левому краю */
+	margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
  text-decoration:none; 
  text-align:center; 
  padding:11px 32px; 
@@ -46,4 +51,38 @@ button{
  -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
  -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
  box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-  }
+}
+.logo__img{
+	margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+float: left; /* Выравнивание по левому краю */
+border-radius: 50px; /*скругление*/
+width: 50px;
+height: 50px;
+}
+.header{
+	background:#ccc;/*цвет фона*/
+	background-size:cover;/*фон пропорцианально растягивается и заполняется весь блок, внутри которого он находится*/
+	height:20vh;/*100vh-100% от высоты окна браузера*/
+	text-align:center;/*выравнивание текста по центру*/
+/*выравнивание текста по центру и вертекали*/	
+	display:flex;/*определяем блок header как контейнер для flex*/
+	flex-direction:column;/*создание клонок*/
+	align-items:center;/*выравнивание содержимого flex бокса по горизонтали*/
+	justify-content:center;/*выравнивание по ширине и по центру*/
+	position:relative;/*позиция относительно родителя(основного блока)*/
+	z-index: 1;
+}
+.header_window{
+	background:#fff;/*цвет фона*/
+	color:#fff;/*цвет текста*/
+	background-size:cover;/*фон пропорцианально растягивается и заполняется весь блок, внутри которого он находится*/
+	height:80vh;/*100vh-100% от высоты окна браузера*/
+	text-align:center;/*выравнивание текста по центру*/
+/*выравнивание текста по центру и вертекали*/	
+	display:flex;/*определяем блок header как контейнер для flex*/
+	flex-direction:column;/*создание клонок*/
+	align-items:center;/*выравнивание содержимого flex бокса по горизонтали*/
+	justify-content:center;/*выравнивание по ширине и по центру*/
+	position:relative;/*позиция относительно родителя(основного блока)*/
+	z-index: 0;
+}
