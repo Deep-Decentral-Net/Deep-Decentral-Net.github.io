@@ -33,14 +33,15 @@ p('Тут тоже текст','right');
 button.onclick = function() {
 	var input = document.querySelector('#input').value; // private.ddn/fcfde6b790f8e
 
-	var key = input.split('/')[1];
-	var site = input.split('/')[0];
+	//var key = input.split('/')[1];
+	//var site = input.split('/')[0];
+	var site = input;
 	var hash;
-	
+/*	
 if (key=='') or (key == null)
 {
 	key = 'e8f097b6edfcf'; //default crypto key
-}
+}*/
 if (site=='')
 	{
 		hash = '0xf7a547eb9569f548911568c29812cf392fc2823ce7492c5ab10e605e61879d87';
