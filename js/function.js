@@ -1,6 +1,12 @@
 var output = document.querySelector('.output');
 var button = document.querySelector('.button');
 
+/*
+$("output").on("button", function(){
+// code there
+})
+*/
+
 function h1(text,align) {
   output.innerHTML += '<h1 align="'+ align +'">' + text + '</h1>';
 }
@@ -31,11 +37,12 @@ p('Тут тоже текст','right');
 
 
 button.onclick = function() {
+	/*
 	var input = document.querySelector('#input').value; // private.ddn
-
-	//var key = input.split('/')[1];
-	//var site = input.split('/')[0];
-	var site = input;
+	var key = input.split('/')[1];
+	var site = input.split('/')[0];
+	*/
+	var site = document.querySelector('#input').value;
 	var hash;
 /*	
 if (key=='') or (key == null)
@@ -45,7 +52,8 @@ if (key=='') or (key == null)
 */
 if (site=='')
 	{
-		hash = '0xf7a547eb9569f548911568c29812cf392fc2823ce7492c5ab10e605e61879d87';
+		h1('Error. The site address was not found.','center');
+		//hash = '0xf7a547eb9569f548911568c29812cf392fc2823ce7492c5ab10e605e61879d87';
 	}
 else if (site.split('.')[1] == 'ddn')
 	{
@@ -74,8 +82,8 @@ else if (site.split('.')[1] == 'ddn')
 			
 		if (hash == '') or (hash == null)
 			{
-				h1('Добро пожаловать','center');
-				hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
+				h1('Error. The site address was not found.','center');
+				//hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 			}
 	}
 else if (site.split('.')[1] == 'minter')
@@ -84,8 +92,8 @@ else if (site.split('.')[1] == 'minter')
 	}
 else
 	{
-		h1('Добро пожаловать','center');
-		hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
+		h1('Error. The site address was not found.','center');
+		//hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 	}
 	//-------------------------------
 	var api = 'https://api.minter.one';
@@ -102,8 +110,8 @@ else
 		req.send(null);
 		var json = JSON.parse(JSON.stringify(JSON.parse(req.responseText)));
 		var payload =  json.result.payload;
-		var test = Base64.decode(payload);
+		//var test = Base64.decode(payload);
 		
-		var a = post();
-		output.innerHTML = a;
+		//var a = post();
+		output.innerHTML = payload;
 }
