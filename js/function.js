@@ -31,7 +31,7 @@ p('Тут тоже текст','right');
 
 
 button.onclick = function() {
-	var input = document.querySelector('#input').value; // private.ddn/fcfde6b790f8e
+	var input = document.querySelector('#input').value; // private.ddn
 
 	//var key = input.split('/')[1];
 	//var site = input.split('/')[0];
@@ -41,7 +41,8 @@ button.onclick = function() {
 if (key=='') or (key == null)
 {
 	key = 'e8f097b6edfcf'; //default crypto key
-}*/
+}
+*/
 if (site=='')
 	{
 		hash = '0xf7a547eb9569f548911568c29812cf392fc2823ce7492c5ab10e605e61879d87';
@@ -73,6 +74,7 @@ else if (site.split('.')[1] == 'ddn')
 			
 		if (hash == '') or (hash == null)
 			{
+				h1('Добро пожаловать','center');
 				hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 			}
 	}
@@ -82,6 +84,7 @@ else if (site.split('.')[1] == 'minter')
 	}
 else
 	{
+		h1('Добро пожаловать','center');
 		hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 	}
 	//-------------------------------
