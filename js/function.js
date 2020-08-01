@@ -1,27 +1,9 @@
-function getUrlVar(){
-    var urlVar = window.location.search; // получаем параметры из урла
-    var arrayVar = []; // массив для хранения переменных
-    var valueAndKey = []; // массив для временного хранения значения и имени переменной
-    var resultArray = []; // массив для хранения переменных
-    arrayVar = (urlVar.substr(1)).split('&'); // разбираем урл на параметры
-    if(arrayVar[0]=="") return false; // если нет переменных в урле
-    for (i = 0; i < arrayVar.length; i ++) { // перебираем все переменные из урла
-        valueAndKey = arrayVar[i].split('='); // пишем в массив имя переменной и ее значение
-        resultArray[valueAndKey[0]] = valueAndKey[1]; // пишем в итоговый массив имя переменной и ее значение
-    }
-    return resultArray; // возвращаем результат
-}
-var q = getUrlVar();
-h1(q,'center');
+var l = 'left';
+var r = 'right';
+var c = 'center';
 
 var output = document.querySelector('.output');
 var button = document.querySelector('.button');
-
-/*
-$("output").on("button", function(){
-// code there
-})
-*/
 
 function h1(text,align) {
   output.innerHTML += '<h1 align="'+ align +'">' + text + '</h1>';
@@ -39,7 +21,7 @@ function btn(text,link,align,img,w,h) {
 	output.innerHTML += '<a href="' + link + '" target="_blank"> <p align="' + align + '"><button>' + output2 + text + '</button></p></a>';
 }
 
-function img(link,align,width,height)
+function img(link,align,w,h)
 {
 	output.innerHTML += '<p align="' + align + '"><img src="' + link + '" width="' + w + '" height="' + h + '"></p>';
 }
@@ -54,19 +36,8 @@ p('Тут тоже текст','right');
 //0x3e82085570eb527cb2c05e30454bf2fb488b9b7be64ddaec5bed6ee15473c3c5.minter
 
 button.onclick = function() {
-	/*
-	var input = document.querySelector('#input').value; // private.ddn
-	var key = input.split('/')[1];
-	var site = input.split('/')[0];
-	*/
 	var site = document.querySelector('#input').value;
 	var hash;
-/*	
-if (key=='') or (key == null)
-{
-	key = 'e8f097b6edfcf'; //default crypto key
-}
-*/
 if (site=='')
 	{
 		h1('Error. The site address was not found.','center');
@@ -131,7 +102,4 @@ else
 		var s = String(decodeURIComponent(a.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join("")));
 		
 		eval(s);
-		
-		//var a = post();
-		//output.innerHTML = typeof s;
 }
