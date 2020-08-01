@@ -2,8 +2,36 @@ var l = 'left';
 var r = 'right';
 var c = 'center';
 
+function getUrlVar(){
+    var urlVar = window.location.search; // получаем параметры из урла
+    var arrayVar = []; // массив для хранения переменных
+    var valueAndKey = []; // массив для временного хранения значения и имени переменной
+    var resultArray = []; // массив для хранения переменных
+    arrayVar = (urlVar.substr(1)).split('&'); // разбираем урл на параметры
+    if(arrayVar[0]=="") return false; // если нет переменных в урле
+    for (i = 0; i < arrayVar.length; i ++) { // перебираем все переменные из урла
+        valueAndKey = arrayVar[i].split('='); // пишем в массив имя переменной и ее значение
+        resultArray[valueAndKey[0]] = valueAndKey[1]; // пишем в итоговый массив имя переменной и ее значение
+    }
+	var result = resultArray['q'];
+	if (result == '') { result = false;}
+    return result; // возвращаем результат
+}
+
 var output = document.querySelector('.output');
-var button = document.querySelector('.button');
+var hash;
+
+var q = getUrlVar();
+
+if ( q == false ) 
+	{	
+		var button = document.querySelector('.button');
+		button.onclick = function() { getDDN(); }
+	} 
+else 
+	{
+		getDDN();
+	}
 
 function h1(text,align) {
   output.innerHTML += '<h1 align="'+ align +'">' + text + '</h1>';
@@ -27,21 +55,24 @@ function img(link,align,w,h)
 }
 
 /*
-h1('Добро пожаловать','center');
-p('В самый не заблокированный интернет','left');
-btn('text','','center','',500,100);
-p('Тут тоже текст','right');
+h1('Добро пожаловать',c);
+p('В самый не заблокированный интернет',l);
+btn('text','',c,'',500,100);
+p('Тут тоже текст',r);
 */
 
 //0x3e82085570eb527cb2c05e30454bf2fb488b9b7be64ddaec5bed6ee15473c3c5.minter
 
-button.onclick = function() {
-	var site = document.querySelector('#input').value;
-	var hash;
+function getDDN() {
+	if ( q == false ) {	
+		var site = document.querySelector('#input').value;
+	} else {
+		var site = q;
+	}
+	
 if (site=='')
 	{
 		h1('Error. The site address was not found.','center');
-		//hash = '0xf7a547eb9569f548911568c29812cf392fc2823ce7492c5ab10e605e61879d87';
 	}
 else if (site.split('.')[1] == 'ddn')
 	{
@@ -71,7 +102,6 @@ else if (site.split('.')[1] == 'ddn')
 		if (hash == '') or (hash == null)
 			{
 				h1('Error. The site address was not found.','center');
-				//hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 			}
 	}
 else if (site.split('.')[1] == 'minter')
