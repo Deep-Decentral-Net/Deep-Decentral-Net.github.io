@@ -46,7 +46,7 @@ function btn(text,link,align,img,w,h) {
 		{output2 = "<img src='" + img + "' style='vertical-align: middle' width='" + w + "' height='" + h + "'>";}
 	else
 		{output2 = '';}
-	output.innerHTML += '<a href="' + link + '" target="_blank"> <p align="' + align + '"><button>' + output2 + text + '</button></p></a>';
+	output.innerHTML += '<a href="' + link + '" target="_blank"> <p align="' + align + '"><button class="button">' + output2 + text + '</button></p></a>';
 }
 
 function img(link,align,w,h)
@@ -72,7 +72,7 @@ function getDDN() {
 	
 if (site=='')
 	{
-		h1('Error. The site address was not found.','center');
+		h1('Error 001. The site address was not found.','center');
 	}
 else if (site.split('.')[1] == 'ddn')
 	{
@@ -101,7 +101,7 @@ else if (site.split('.')[1] == 'ddn')
 			
 		if (hash == '') or (hash == null)
 			{
-				h1('Error. The site address was not found.','center');
+				h1('Error 002. The site address was not found.','center');
 			}
 	}
 else if (site.split('.')[1] == 'minter')
@@ -110,7 +110,7 @@ else if (site.split('.')[1] == 'minter')
 	}
 else
 	{
-		h1('Error. The site address was not found.','center');
+		h1('Error 003. The site address was not found.','center');
 		//hash = '0x077bcd7807935ccab5ec850abaf383496016f12d707f396d7c2be610fa034797'; //Error. The site address was not found.
 	}
 	//-------------------------------
@@ -129,9 +129,8 @@ else
 		var json = JSON.parse(JSON.stringify(JSON.parse(req.responseText)));
 		var payload = json.result.payload;
 		var a = Base64.decode(payload);
-		var b = Base64.decode(a);
-		var s = String(decodeURIComponent(a.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join("")));
-		
-		eval(s);
+		var t = String(decodeURIComponent(a.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join("")));
+		var b = Base64.decode(t);
+		eval(b);
 }
 //0x17facf3d7714f13ffe69aa1718531084230e88a704ab5c1034e98ef277c48b45.minter
