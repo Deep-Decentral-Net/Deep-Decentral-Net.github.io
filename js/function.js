@@ -93,15 +93,15 @@ else if (site.split('.')[1] == 'ddn')
 		for (var i = 0; i <= json.length-1; i++)
 			{
 				jsonSite = json[i]['site'];
-				if (jsonSite == site) {
-					hash = json[i]['hash'];
-					blochain = json[i]['blochain'];
-				}
-			}
-			
-		if (hash == '') or (hash == null)
-			{
-				h1('Error 002. The site address was not found.','center');
+				if (jsonSite == site) 
+					{
+						hash = json[i]['hash'];
+						blochain = json[i]['blochain'];
+					}
+				else
+					{
+							h1('Error 002. The site address was not found.','center');
+					}
 			}
 	}
 else if (site.split('.')[1] == 'minter')
