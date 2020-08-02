@@ -26,7 +26,7 @@ var q = getUrlVar();
 if ( q == false ) 
 	{	
 		var button = document.querySelector('.button');
-		button.onclick = function() { getDDN(); }
+		button.onclick = function() { output.innerHTML = ''; getDDN(); }
 	} 
 else 
 	{
