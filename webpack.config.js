@@ -61,7 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: "./src/index.jade",
+      template: "./src/index.pug",
       filename: "index.html",
     }),
     new CopyWebpackPlugin({
