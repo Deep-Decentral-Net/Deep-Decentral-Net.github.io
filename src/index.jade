@@ -38,11 +38,12 @@ html(lang="en")
     link(rel="dns-prefetch", href="https://t.me")
     each val, index in htmlWebpackPlugin.files.css
         link(rel="stylesheet", href=val)
-    div.header
-      div.header-content
-        img.logo__img(src="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
-        input.enjoy-css#input(type='text' placeholder='Search...' name='hash' size='100')
-        button.button(type='submit') i class='fa fa-search'
+    body
+        div.header
+          div.header-content
+            img.logo__img(src="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
+            input.enjoy-css#input(type='text' placeholder='Search...' name='hash' size='100')
+            button.button(type='submit') i class='fa fa-search'
         
     .container
       section.profile
