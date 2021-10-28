@@ -1,0 +1,80 @@
+$gray: #333;
+$lightgray: rgba(51, 51, 51, 0.75);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.profile {
+  text-align: center;
+  font-family: verdana, sans-serif;
+  padding: 5px;
+  /* Height status bar in iOS 11.0 */
+  padding-top: constant(safe-area-inset-top);
+  /* Height status bar in iOS 11+ */
+  padding-top: env(safe-area-inset-top);
+  max-width: 450px;
+
+  .avatar {
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px 0 #fff;
+    img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  .card {
+    &__name {
+      color: $gray;
+    }
+    &__position {
+      color: $lightgray;
+    }
+    &__description {
+      color: $lightgray;
+      font-size: 16px;
+    }
+  }
+
+  .networks {
+    margin: 0 auto;
+
+    &__network {
+      vertical-align: top;
+      padding: 10px;
+      opacity: 0.5;
+      border: 1px solid transparent;
+      border-radius: 50%;
+
+      &:visited,
+      &:hover {
+        color: $gray;
+        text-decoration: none;
+      }
+      &:hover,
+      &:active {
+        opacity: 1;
+        border-color: $gray;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
