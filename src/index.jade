@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
   head
-    meta(charset="utf-8")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    link(rel="stylesheet", href="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/css/css.css")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     title DDN WEB
     meta(name="viewport", content="width=device-width")
     meta(name="description", content="Deep Decentral Net")
@@ -25,7 +27,7 @@ html(lang="en")
 
     meta(name="theme-color", content="#ffffff")
     link(rel="manifest", href="/assets/manifest.webmanifest")
-    link(rel="apple-touch-icon", href="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/favicon.jpg")
+    link(rel="apple-touch-icon", href="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
     link(rel="icon", type="image/png", sizes="16x16", href="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
     link(rel="icon", type="image/ico", href="/assets/favicon.ico")
@@ -36,6 +38,12 @@ html(lang="en")
     link(rel="dns-prefetch", href="https://t.me")
     each val, index in htmlWebpackPlugin.files.css
         link(rel="stylesheet", href=val)
+    div.header
+      div.header-content
+        img.logo__img(src="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png")
+        input.enjoy-css#input(type='text' placeholder='Search...' name='hash' size='100')
+        button.button(type='submit') i class='fa fa-search'
+        
     .container
       section.profile
         section.avatar
