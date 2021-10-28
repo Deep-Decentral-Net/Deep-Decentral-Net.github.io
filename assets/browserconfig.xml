@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/assets/images/mstile-150x150.png"/>
+            <square150x150logo src="https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png"/>
             <TileColor>#da532c</TileColor>
         </tile>
     </msapplication>
