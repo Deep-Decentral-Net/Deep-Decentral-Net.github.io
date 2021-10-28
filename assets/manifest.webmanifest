@@ -4,14 +4,14 @@
   "start_url": "/index.html",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/favicon.jpg",
+      "src": "https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png",
       "sizes": "192x192",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
-      "src": "https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/favicon.jpg",
+      "src": "https://raw.githubusercontent.com/Deep-Decentral-Net/Deep-Decentral-Net.github.io/main/assets/images/favicon.png",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/png"
     }
   ],
   "theme_color": "#ffffff",
